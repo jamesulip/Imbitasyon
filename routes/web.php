@@ -2,9 +2,12 @@
 
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\InvitedController;
+use App\Models\Event;
+use App\Models\Invited;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use Doctrine\DBAL\Events;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,12 +21,23 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    return Inertia::render('Dashboard');
+    return Inertia::render('invite/Invitation');
 });
 
 Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
+    $events = \App\Models\Event::withCount('invited', 'invitedGoing')
+
+        ->where('created_by', auth()->id())->get();
+    return Inertia::render('Dashboard', [
+        'events' => $events
+    ]);
 })->middleware(['auth', 'verified'])->name('dashboard');
-Route::resource('events', EventController::class);
-Route::resource('invite', InvitedController::class);
+Route::group(['middleware' => ['auth', 'verified']], function () {
+    Route::resource('events', EventController::class);
+    Route::resource('invite', InvitedController::class);
+});
+Route::get('invitation/{invited:code}', function (Invited $invited) {
+    $event = Event::find($invited->event_id);
+    return Inertia::render('invite/Invitation', ['code' => $invited, 'event' => $event]);
+})->middleware(['guest']);
 require __DIR__ . '/auth.php';

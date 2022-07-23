@@ -5,6 +5,7 @@ use App\Models\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\InvitedController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::group(['middleware' => ['guest']], function () {
     Route::apiResource('events', EventController::class);
-    Route::resource('invited', Invited::class);
+    Route::resource('invited', InvitedController::class);
+    Route::post('import-invited', [InvitedController::class, 'import']);
     Route::resource('responses', Response::class);
 });

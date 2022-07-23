@@ -3,11 +3,18 @@ import BreezeAuthenticatedLayout from "@/Layouts/Authenticated.vue";
 import { Head } from "@inertiajs/inertia-vue3";
 import { Inertia } from "@inertiajs/inertia";
 import InvitationStatus from "@/Components/InvitationResponse.vue";
-console.log(route);
-const { pEvent } = defineProps({
+import ImportInvited from "@/Components/ImportInvited.vue";
+import { Link } from "@inertiajs/inertia-vue3";
+const { pEvent, invited } = defineProps({
     pEvent: {
         type: Object,
         default: () => {},
+    },
+    invited: {
+        type: Object,
+        default: () => {
+            data: [];
+        },
     },
 });
 function submit() {
@@ -17,7 +24,6 @@ function submit() {
 
 <template>
     <Head title="Dashboard" />
-
     <BreezeAuthenticatedLayout>
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -29,12 +35,11 @@ function submit() {
                 <h2
                     class="max-w-6xl mx-auto mt-8 px-4 text-lg leading-6 font-medium text-gray-900 sm:px-6 lg:px-8"
                 >
-                    Invited
+                    <div class="flex gap-3 justify-between items-center">
+                        Invited
+                        <ImportInvited />
+                    </div>
                 </h2>
-
-                <!-- Activity list (smallest breakpoint only) -->
-
-                <!-- Activity table (small breakpoint and up) -->
                 <div class="">
                     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div class="flex flex-col mt-2">
@@ -89,7 +94,7 @@ function submit() {
                                         class="bg-white divide-y divide-gray-200"
                                     >
                                         <tr
-                                            v-for="invite in pEvent.invited"
+                                            v-for="invite in invited.data"
                                             class="bg-white"
                                         >
                                             <td
@@ -154,6 +159,25 @@ function submit() {
                                         </tr>
                                     </tbody>
                                 </table>
+                                <nav
+                                    class="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6"
+                                    aria-label="Pagination"
+                                >
+                                    <div
+                                        class="flex-1 flex justify-between sm:justify-end gap-1"
+                                    >
+                                        <Link
+                                            type="button"
+                                            as="button"
+                                            v-for="link in invited.links"
+                                            :href="link.url"
+                                            class="disabled:opacity-50 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
+                                            v-html="link.label"
+                                            :disabled="!link.url"
+                                        >
+                                        </Link>
+                                    </div>
+                                </nav>
                             </div>
                         </div>
                     </div>

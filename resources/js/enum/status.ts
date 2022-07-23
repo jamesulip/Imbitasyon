@@ -3,6 +3,7 @@ export enum ReponseStatus {
     GOING = 1,
     MAYBE = 2,
     NOTGOING = 3,
+    NORESPONSE = 4,
 }
 export function sadd() {
     alert("asdasd");

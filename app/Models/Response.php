@@ -10,6 +10,7 @@ class Response extends Model
     const GOING = 1;
     const MAYBE = 2;
     const NOT_GOING = 3;
+    const NO_REPONSE = 4;
 
     use HasFactory;
     protected $fillable = ['name'];
