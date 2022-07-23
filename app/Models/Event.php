@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Response;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Event extends Model
 {
@@ -23,5 +24,9 @@ class Event extends Model
     public function invited()
     {
         return $this->hasMany(Invited::class, 'event_id');
+    }
+    public function invitedGoing()
+    {
+        return $this->hasMany(Invited::class, 'event_id')->where('response_id', Response::GOING);
     }
 }

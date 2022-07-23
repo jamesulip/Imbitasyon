@@ -7,6 +7,7 @@ use App\Models\Event;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use App\Http\Requests\StoreEventRequest;
+use App\Models\Invited;
 use Illuminate\Support\Facades\Redirect;
 
 class EventController extends Controller
@@ -53,8 +54,9 @@ class EventController extends Controller
     public function show($id)
     {
         //
-        $event = Event::with('invited.response')->findOrFail($id);
-        return Inertia::render('Events/Show')->with(['pEvent' => $event]);
+        $event = Event::findOrFail($id);
+        $invited = Invited::with('response')->where('event_id', $id)->paginate(100);
+        return Inertia::render('Events/Show')->with(['pEvent' => $event, 'invited' => $invited]);
     }
     public function edit($id)
     {

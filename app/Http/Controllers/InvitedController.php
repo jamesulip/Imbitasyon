@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Event;
 use App\Models\Invited;
+use Illuminate\Http\Request;
+use App\Imports\InviteImport;
+use Maatwebsite\Excel\Facades\Excel;
 use App\Http\Requests\StoreInvitedRequest;
 use App\Http\Requests\UpdateInvitedRequest;
 
@@ -69,9 +73,13 @@ class InvitedController extends Controller
      * @param  \App\Models\Invited  $invited
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateInvitedRequest $request, Invited $invited)
+    public function update(UpdateInvitedRequest $request, $invited)
     {
         //
+        $invited = Invited::findOrFail($invited);
+        $invited = $invited->fill($request->all());
+        $invited->save();
+        return $invited;
     }
 
     /**
@@ -83,5 +91,13 @@ class InvitedController extends Controller
     public function destroy(Invited $invited)
     {
         //
+    }
+    public function import(Request $req)
+    {
+
+        $imports =  Excel::import(new InviteImport, request()->file('import'));
+        $event = Event::findOrFail($req->event_id);
+        $invited = Invited::with('response')->where('event_id', $req->event_id)->paginate(100);
+        return redirect()->route('events.show', $req->event_id)->with([]);
     }
 }

@@ -16,7 +16,7 @@ class EventSeeder extends Seeder
     {
         //
         $response = [
-            'going', 'maybe', 'not_going'
+            'going', 'maybe', 'not_going', 'no_response'
         ];
         foreach ($response as $key => $value) {
             \App\Models\Response::updateOrCreate(

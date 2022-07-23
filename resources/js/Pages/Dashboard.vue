@@ -1,15 +1,14 @@
 <script setup>
 import BreezeAuthenticatedLayout from "@/Layouts/Authenticated.vue";
-import { Head } from "@inertiajs/inertia-vue3";
-const people = [
-    {
-        name: "Lindsay Walton",
-        title: "Front-end Developer",
-        email: "lindsay.walton@example.com",
-        role: "Member",
+import { Head, Link } from "@inertiajs/inertia-vue3";
+defineProps({
+    events: {
+        type: Object,
+        default: () => ({
+            data: [],
+        }),
     },
-    // More people...
-];
+});
 </script>
 
 <template>
@@ -37,68 +36,69 @@ const people = [
                                         scope="col"
                                         class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6"
                                     >
-                                        Name
+                                        Event Name
                                     </th>
                                     <th
                                         scope="col"
                                         class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
                                     >
-                                        Title
+                                        Description
                                     </th>
                                     <th
                                         scope="col"
                                         class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
                                     >
-                                        Email
+                                        Date
                                     </th>
                                     <th
                                         scope="col"
                                         class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
                                     >
-                                        Role
+                                        Invited
                                     </th>
                                     <th
                                         scope="col"
                                         class="relative py-3.5 pl-3 pr-4 sm:pr-6"
                                     >
-                                        <span class="sr-only">Edit</span>
+                                        <span class="sr-only">Show</span>
                                     </th>
                                 </tr>
                             </thead>
                             <tbody class="divide-y divide-gray-200 bg-white">
-                                <tr
-                                    v-for="person in people"
-                                    :key="person.email"
-                                >
+                                <tr v-for="event in events" :key="event.id">
                                     <td
                                         class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6"
                                     >
-                                        {{ person.name }}
+                                        {{ event.name }}
                                     </td>
                                     <td
                                         class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
                                     >
-                                        {{ person.title }}
+                                        {{ event.description }}
                                     </td>
                                     <td
                                         class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
                                     >
-                                        {{ person.email }}
+                                        {{ event.start_date }}
                                     </td>
                                     <td
                                         class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
                                     >
-                                        {{ person.role }}
+                                        {{ event.invited_going_count }}/{{
+                                            event.invited_count
+                                        }}
                                     </td>
                                     <td
                                         class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6"
                                     >
-                                        <a
-                                            href="#"
+                                        <Link
+                                            :href="
+                                                route('events.show', event.id)
+                                            "
                                             class="text-indigo-600 hover:text-indigo-900"
-                                            >Edit<span class="sr-only"
-                                                >, {{ person.name }}</span
-                                            ></a
+                                            >View<span class="sr-only"
+                                                >, {{ event.name }}</span
+                                            ></Link
                                         >
                                     </td>
                                 </tr>
