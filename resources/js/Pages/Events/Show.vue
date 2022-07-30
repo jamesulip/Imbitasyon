@@ -106,7 +106,9 @@ function submit() {
                                                     <img
                                                         class="w-52 h-auto"
                                                         :src="`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://ardee-and-randy.test/${invite.code}`"
-                                                    />QR</a
+                                                    />{{
+                                                        `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://ardee-and-randy.test/${invite.code}`
+                                                    }}</a
                                                 >
                                             </td>
                                             <td
