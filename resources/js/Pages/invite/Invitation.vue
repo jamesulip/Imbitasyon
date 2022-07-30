@@ -1,72 +1,195 @@
 <template>
-    <div class="grid col-span-1 relative">
-        <div class="grid w-screen grid-cols-1">
-            <div class="bg-gray-800 col-span-1">
-                <div class="h-screen">
-                    <img
-                        src="/images/DSCF8585.jpg"
-                        class="w-full h-full object-center object-cover lg:w-full lg:h-full"
-                    />
+    <div class="flex bg-hero-pattern">
+        <div class="grid col-span-1 mx-auto relative max-w-3xl">
+            <div class="grid grid-cols-1" data-aos="zoom-in">
+                <div class="bg-gray-800 col-span-1">
+                    <div class="h-screen">
+                        <img
+                            src="/images/DSCF8585.jpg"
+                            class="w-full h-full object-center object-cover lg:w-full lg:h-full"
+                        />
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-screen p-5 grid">
+                <div class="text-black h-[40vh] text-center flex">
                     <div
-                        class="text-white absolute bottom-0 right-0 text-3xl m-3"
+                        data-aos="zoom-in"
+                        style="font-family: amalfi-coast"
+                        class="text-6xl leading-tight m-auto"
                     >
-                        Ardee and Randy
+                        Ardee &<br />
+                        Randy
                     </div>
                 </div>
-            </div>
-            <div class="bg-gray-700 p-12">
-                <div>
-                    <h1 class="text-white text-2xl font-bold text-center">
-                        Save the Date
-                    </h1>
-                    <p class="text-white text-lg text-center">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Quisquam, quidem.
-                    </p>
-                    <!-- create going and not going button -->
-                    <div class="flex justify-center gap-3">
-                        <button
-                            @click="going"
-                            class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full"
-                        >
-                            Going
-                        </button>
-                        <button
-                            @click="notGoing"
-                            class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full"
-                        >
-                            Not Going
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="h-[50vh] p-5 grid">
-            <div class="text-center m-auto">
-                {{
+                <div class="">
+                    <!-- {{
                     formatDate(
                         new Date(event.start_date),
                         new Date(event.end_date)
                     )
-                }}
+                }} -->
+                    <div class="flex">
+                        <div class="p-3 border-r font-bold flex">
+                            <div
+                                data-aos="zoom-in"
+                                class="text-right text-2xl self-center"
+                            >
+                                20<br />
+                                AUG<br />
+                                2022
+                            </div>
+                        </div>
+                        <div
+                            class="text-sm uppercase flex flex-col gap-3 text-left p-3"
+                        >
+                            <p data-aos="zoom-in">
+                                Together with thier families, happily invite you
+                                to celebrate thier love and marriage
+                            </p>
+                            <p data-aos="zoom-in">
+                                3pm <br />
+                                Sta. Teresita Del Nino Jesus Parish <br />43
+                                Kanlaon St., Brgy. Sta. Teresita, QC
+                            </p>
+                            <p data-aos="zoom-in">
+                                6pm <br />
+                                Asiong Sizzling House <br />
+                                815 Gonzalo Puyat St., Quiapo, Manila
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="relative">
-            <div class="absolute inset-0 flex items-center" aria-hidden="true">
-                <div class="w-full border-t border-gray-300" />
+
+            <!-- <div class="h-[50vh] flex">
+                <div class="text-center m-auto">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Deleniti molestiae debitis delectus dolores accusamus,
+                    pariatur aut mollitia eius, nisi sapiente cum. Nihil, vitae?
+                    Quidem ratione veniam tempora non eum libero.
+                </div>
+            </div> -->
+            <div class="h-screen flex">
+                <!-- create 2 column list -->
+                <div class="mx-auto text-sm md:text-2xl">
+                    <h4
+                        data-aos="zoom-in"
+                        class="text-center uppercase"
+                        style="font-family: 'century gothic'"
+                    >
+                        Principal Sponsors
+                    </h4>
+
+                    <div class="flex gap-3 mx-auto text-sm md:text-2xl">
+                        <ul class="">
+                            <li data-aos="fade-right" class="text-right">
+                                Dir. Roselle Delos Reyes
+                            </li>
+                            <li data-aos="fade-right" class="text-right">
+                                Ms. Ritchelle Marie Pobre
+                            </li>
+                            <li data-aos="fade-right" class="text-right">
+                                Hon. Joy Villamar
+                            </li>
+                            <li data-aos="fade-right" class="text-right">
+                                Mrs. Helen Abdosan
+                            </li>
+                            <li data-aos="fade-right" class="text-right">
+                                Hon. Maile Atienza
+                            </li>
+                            <li data-aos="fade-right" class="text-right">
+                                Mrs. Hilda Vicencio
+                            </li>
+                            <li data-aos="fade-right" class="text-right">
+                                Mrs. Mabel Leon
+                            </li>
+                            <li data-aos="fade-right" class="text-right">
+                                Mrs. Norma Reyes
+                            </li>
+                            <li data-aos="fade-right" class="text-right">
+                                Mrs. Chariza Calib-og
+                            </li>
+                            <li data-aos="fade-right" class="text-right">
+                                Mrs. Rachelle Silorio
+                            </li>
+                            <li data-aos="fade-right" class="text-right">
+                                Mrs. Marie Author
+                            </li>
+                            <li data-aos="fade-right" class="text-right">
+                                Mrs. Rizza Pillos
+                            </li>
+                            <li data-aos="fade-right" class="text-right">
+                                Mrs. Analyn Suan
+                            </li>
+                        </ul>
+                        <ul>
+                            <li data-aos="fade-left" class="text-left">
+                                Dir. Roselle Delos Reyes
+                            </li>
+                            <li data-aos="fade-left" class="text-left">
+                                Ms. Ritchelle Marie Pobre
+                            </li>
+                            <li data-aos="fade-left" class="text-left">
+                                Hon. Joy Villamar
+                            </li>
+                            <li data-aos="fade-left" class="text-left">
+                                Mrs. Helen Abdosan
+                            </li>
+                            <li data-aos="fade-left" class="text-left">
+                                Hon. Maile Atienza
+                            </li>
+                            <li data-aos="fade-left" class="text-left">
+                                Mrs. Hilda Vicencio
+                            </li>
+                            <li data-aos="fade-left" class="text-left">
+                                Mrs. Mabel Leon
+                            </li>
+                            <li data-aos="fade-left" class="text-left">
+                                Mrs. Norma Reyes
+                            </li>
+                            <li data-aos="fade-left" class="text-left">
+                                Mrs. Chariza Calib-og
+                            </li>
+                            <li data-aos="fade-left" class="text-left">
+                                Mrs. Rachelle Silorio
+                            </li>
+                            <li data-aos="fade-left" class="text-left">
+                                Mrs. Marie Author
+                            </li>
+                            <li data-aos="fade-left" class="text-left">
+                                Mrs. Rizza Pillos
+                            </li>
+                            <li data-aos="fade-left" class="text-left">
+                                Mrs. Analyn Suan
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="relative flex justify-center">
-                <span class="px-2 bg-white text-sm text-gray-500">
-                    Continue
-                </span>
-            </div>
-        </div>
-        <div class="h-[50vh] flex">
-            <div class="text-center m-auto">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Deleniti molestiae debitis delectus dolores accusamus, pariatur
-                aut mollitia eius, nisi sapiente cum. Nihil, vitae? Quidem
-                ratione veniam tempora non eum libero.
+            <div class="bg-gray-700 p-2 sticky hidden bottom-0">
+                <div>
+                    <div class="flex justify-center gap-3">
+                        <!-- <button
+                        @click="going"
+                        class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full"
+                    >
+                        Going
+                    </button>
+                    <button
+                        @click="notGoing"
+                        class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full"
+                    >
+                        Not Going
+                    </button> -->
+                        <button
+                            class="text-white font-bold py-2 px-4 rounded-full"
+                        >
+                            RSVP
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -74,6 +197,11 @@
 <script setup lang="ts">
 import axios from "axios";
 import { ReponseStatus } from "@/enum/status";
+import AOS from "aos";
+import "aos/dist/aos.css";
+onMounted(() => {
+    AOS.init();
+});
 const { code: invitation, event } = defineProps({
     code: {
         type: Object,
