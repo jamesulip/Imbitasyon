@@ -15,6 +15,9 @@ module.exports = {
                 sans: ["Nunito", ...defaultTheme.fontFamily.sans],
             },
         },
+        backgroundImage: {
+            "hero-pattern": "url('/img/13264.jpg')",
+        },
     },
 
     plugins: [

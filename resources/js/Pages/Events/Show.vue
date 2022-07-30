@@ -100,10 +100,16 @@ function submit() {
                                             <td
                                                 class="px-4 py-2 whitespace-nowrap text-sm text-gray-900"
                                             >
-                                                <img
-                                                    class="w-52 h-auto"
-                                                    :src="`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://ardee-and-randy.test/${invite.code}`"
-                                                />
+                                                <a
+                                                    :href="`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://ardee-and-randy.test/${invite.code}`"
+                                                >
+                                                    <img
+                                                        class="w-52 h-auto"
+                                                        :src="`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://ardee-and-randy.test/${invite.code}`"
+                                                    />{{
+                                                        `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://ardee-and-randy.test/${invite.code}`
+                                                    }}</a
+                                                >
                                             </td>
                                             <td
                                                 class="max-w-0 w-full px-6 py-4 whitespace-nowrap text-sm text-gray-900"
@@ -129,7 +135,7 @@ function submit() {
                                                     >{{ invite.code }}
                                                 </span>
                                             </td>
-                                            <td
+                                            <!-- <td
                                                 class="px-6 py-4 text-right whitespace-nowrap text-sm text-gray-500"
                                             >
                                                 <span
@@ -155,7 +161,7 @@ function submit() {
                                                         invite.created_at
                                                     }}</time
                                                 >
-                                            </td>
+                                            </td> -->
                                         </tr>
                                     </tbody>
                                 </table>
