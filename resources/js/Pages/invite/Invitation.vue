@@ -1,7 +1,6 @@
 <template>
     <div class="flex bg-hero-pattern">
         <div class="grid col-span-1 mx-auto relative max-w-3xl">
-            not final design
             <div class="grid grid-cols-1 relative" data-aos="zoom-in">
                 <div class="bg-gray-800 col-span-1">
                     <div class="h-screen">
@@ -11,12 +10,7 @@
                         />
                     </div>
                 </div>
-                <!-- <div
-                    class="absolute top-0 text-white text-center w-full mt-2"
-                    style="font-family: 'century gothic'"
-                >
-                    Hi, <br />
-                </div> -->
+
                 <div
                     class="w-full absolute top-0 left-0 sm:p-12 p-11 text-white"
                 >
@@ -25,6 +19,24 @@
                         style="font-family: amalfi-coast"
                     >
                         You are invited, <br />{{ code.name }}
+                    </div>
+                </div>
+                <div class="w-full flex absolute bottom-6 text-white">
+                    <div class="mx-auto animate-bounce">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-12 w-12"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M19 9l-7 7-7-7"
+                            />
+                        </svg>
                     </div>
                 </div>
             </div>
@@ -51,7 +63,7 @@
                         <div class="p-3 border-r font-bold flex">
                             <div
                                 data-aos="zoom-in"
-                                class="text-right text-2xl self-center"
+                                class="text-right mx-auto text-md md:text-3xl self-center"
                             >
                                 20<br />
                                 AUG<br />
@@ -59,21 +71,33 @@
                             </div>
                         </div>
                         <div
-                            class="text-sm uppercase flex flex-col gap-3 text-left p-3"
+                            class="mx-auto text-sm md:text-2xl uppercase flex flex-col gap-3 text-left p-3"
                         >
                             <p data-aos="zoom-in">
                                 Together with thier families, happily invite you
                                 to celebrate thier love and marriage
                             </p>
-                            <p data-aos="zoom-in">
-                                3pm <br />
+
+                            3pm <br />
+                            <a
+                                target="_blank"
+                                class="text-blue-600 underline"
+                                href="https://goo.gl/maps/GdjqKgFzMHxbe4GBA"
+                                data-aos="zoom-in"
+                            >
                                 Sta. Teresita Del Nino Jesus Parish <br />43
                                 Kanlaon St., Brgy. Sta. Teresita, QC
-                            </p>
+                            </a>
                             <p data-aos="zoom-in">
                                 6pm <br />
-                                Asiong Sizzling House <br />
-                                815 Gonzalo Puyat St., Quiapo, Manila
+                                <a
+                                    href="https://g.page/Asiong-pagoda?share"
+                                    target="_blank"
+                                    class="text-blue-600 underline"
+                                >
+                                    Asiong Sizzling House <br />
+                                    815 Gonzalo Puyat St., Quiapo, Manila
+                                </a>
                             </p>
                         </div>
                     </div>
@@ -185,28 +209,84 @@
                     </div>
                 </div>
             </div>
-            <div class="bg-gray-700 p-2 sticky hidden bottom-0">
-                <div>
-                    <div class="flex justify-center gap-3">
-                        <!-- <button
-                        @click="going"
-                        class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full"
-                    >
-                        Going
-                    </button>
-                    <button
-                        @click="notGoing"
-                        class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full"
-                    >
-                        Not Going
-                    </button> -->
-                        <button
-                            class="text-white font-bold py-2 px-4 rounded-full"
+            <div class="h-screen w-full flex" id="rvsp">
+                <div
+                    class="m-auto text-md md:text-3xl text-center"
+                    style="font-family: amalfi-coast"
+                >
+                    <div class="pb-12">
+                        kindly rsvp <br />
+                        We hope you can join us!
+                    </div>
+                    <div class="flex flex-col gap-6">
+                        <div
+                            v-for="response in plans"
+                            :key="response.id"
+                            class="flex items-center w-full gap-3"
                         >
-                            RSVP
-                        </button>
+                            <input
+                                :id="response.id"
+                                name="notification-method"
+                                type="radio"
+                                :value="response.id"
+                                :checked="response.id === ReponseStatus.MAYBE"
+                                class="focus:ring-yellow-500 h-12 w-12 text-yellow-600 border-gray-300"
+                                v-model="selReponse"
+                            />
+                            <label
+                                :for="response.id"
+                                class="ml-3 block text-2xl font-semibold text-black"
+                            >
+                                {{ response.name }}
+                            </label>
+                        </div>
+                        <div class="mt-10">
+                            <div v-if="selReponse == ReponseStatus.GOING">
+                                How many person will attend?
+                                <div class="flex gap-5">
+                                    <button @click="code.attending++">-</button>
+                                    <input
+                                        type="number"
+                                        min="1"
+                                        max="20"
+                                        name="name"
+                                        id="name"
+                                        class="mt-0 h-16 block w-full px-0.5 border-0 border-b-2 border-gray-200 focus:ring-0 focus:border-black"
+                                        v-model="code.attending"
+                                    />
+                                    <button @click="code.attending++">+</button>
+                                </div>
+                            </div>
+                            <div v-else-if="selReponse == ReponseStatus.MAYBE">
+                                MAYBE
+                            </div>
+                            <div
+                                v-else-if="selReponse == ReponseStatus.NOTGOING"
+                            >
+                                NOTGOING
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div class="bg-gray-200 text-center p-2 sticky bottom-0 z-50">
+                <a href="#rvsp">
+                    <!-- <div class="flex justify-center gap-3">
+                        <button
+                            @click="going"
+                            class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full"
+                        >
+                            Going
+                        </button>
+                        <button
+                            @click="notGoing"
+                            class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full"
+                        >
+                            Not Going
+                        </button>
+                    </div> -->
+                    Click here to respond
+                </a>
             </div>
         </div>
     </div>
@@ -219,6 +299,21 @@ import "aos/dist/aos.css";
 onMounted(() => {
     AOS.init();
 });
+const plans = [
+    {
+        id: ReponseStatus.GOING,
+        name: "Going",
+    },
+    {
+        id: ReponseStatus.MAYBE,
+        name: "Maybe",
+    },
+    {
+        id: ReponseStatus.NOTGOING,
+        name: "Not Going",
+    },
+];
+const selReponse = ref(ReponseStatus.MAYBE);
 const { code: invitation, event } = defineProps({
     code: {
         type: Object,
