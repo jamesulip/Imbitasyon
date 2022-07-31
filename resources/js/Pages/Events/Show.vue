@@ -102,13 +102,13 @@ function submit() {
                                                 class="px-4 py-2 whitespace-nowrap text-sm text-gray-900"
                                             >
                                                 <a
-                                                    :href="`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${$inertia.page.props.appName.url}/${invite.code}`"
+                                                    :href="`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${$inertia.page.props.appName.url}/invitation/${invite.code}`"
                                                 >
                                                     <img
                                                         class="w-52 h-auto"
-                                                        :src="`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${$inertia.page.props.appName.url}/${invite.code}`"
+                                                        :src="`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${$inertia.page.props.appName.url}/invitation/${invite.code}`"
                                                     />{{
-                                                        `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${$inertia.page.props.appName.url}/${invite.code}`
+                                                        `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${$inertia.page.props.appName.url}/invitation/${invite.code}`
                                                     }}</a
                                                 >
                                             </td>
