@@ -17,13 +17,14 @@
                 >
                     Hi, <br />
                 </div> -->
-                <div class="absolute top-0 left-0 sm:p-20 p-14 text-white">
+                <div
+                    class="w-full absolute top-0 left-0 sm:p-12 p-11 text-white"
+                >
                     <div
-                        class="sm:text-5xl -rotate-45"
+                        class="sm:text-3xl -rotate-45"
                         style="font-family: amalfi-coast"
                     >
-                        You are <br />
-                        invited <br />{{ code.name }}
+                        You are invited, <br />{{ code.name }}
                     </div>
                 </div>
             </div>
