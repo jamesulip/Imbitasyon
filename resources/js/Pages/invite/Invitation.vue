@@ -1,13 +1,29 @@
 <template>
     <div class="flex bg-hero-pattern">
         <div class="grid col-span-1 mx-auto relative max-w-3xl">
-            <div class="grid grid-cols-1" data-aos="zoom-in">
+            not final design
+            <div class="grid grid-cols-1 relative" data-aos="zoom-in">
                 <div class="bg-gray-800 col-span-1">
                     <div class="h-screen">
                         <img
                             src="/images/DSCF8585.jpg"
                             class="w-full h-full object-center object-cover lg:w-full lg:h-full"
                         />
+                    </div>
+                </div>
+                <!-- <div
+                    class="absolute top-0 text-white text-center w-full mt-2"
+                    style="font-family: 'century gothic'"
+                >
+                    Hi, <br />
+                </div> -->
+                <div class="absolute top-0 left-0 sm:p-20 p-14 text-white">
+                    <div
+                        class="sm:text-5xl -rotate-45"
+                        style="font-family: amalfi-coast"
+                    >
+                        You are <br />
+                        invited <br />{{ code.name }}
                     </div>
                 </div>
             </div>
