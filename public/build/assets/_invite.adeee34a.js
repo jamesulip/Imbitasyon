@@ -1,0 +1,1 @@
+import{a as t}from"./vendor.7dce1e3a.js";import{ay as a,W as o}from"./vendor-@vue.80adf6ce.js";const i={__name:"_invite",setup(n){return t.get("/invite/1").then(e=>{console.log(e.data)}),(e,r)=>(a(),o("div",null,"asd"))}};export{i as default};

@@ -1,1 +1,0 @@
-import{R as t,o as a,c as o}from"./app.cd733e85.js";const r={__name:"_invite",setup(n){return t.get("/invite/1").then(e=>{console.log(e.data)}),(e,s)=>(a(),o("div",null,"asd"))}};export{r as default};
