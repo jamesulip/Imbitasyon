@@ -107,7 +107,7 @@ const { invitation } = defineProps({
 });
 const open = ref(false);
 async function submitResponse() {
-    await axios.put(`/api/invited/${invitation.code}`, invitation);
+    axios.put(`/api/invited/${invitation.code}`, invitation);
     open.value = true;
 }
 </script>
