@@ -1,0 +1,1 @@
+var G=(N=>(N[N.GOING=1]="GOING",N[N.MAYBE=2]="MAYBE",N[N.NOTGOING=3]="NOTGOING",N[N.NORESPONSE=4]="NORESPONSE",N))(G||{});function O(){return{1:"Going",2:"Maybe",3:"Not Going",4:"No Response"}}export{G as R,O as s};
