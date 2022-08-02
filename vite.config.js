@@ -24,20 +24,4 @@ export default defineConfig({
         }),
     ],
     css: {},
-    build: {
-        chunkSizeWarningLimit: 1024,
-        rollupOptions: {
-            output: {
-                manualChunks(id) {
-                    if (id.includes("/node_modules/")) {
-                        const modules = ["@vueuse/core", "@vue"];
-                        const chunk = modules.find((module) =>
-                            id.includes(`/node_modules/${module}`)
-                        );
-                        return chunk ? `vendor-${chunk}` : "vendor";
-                    }
-                },
-            },
-        },
-    },
 });
