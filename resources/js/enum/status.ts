@@ -5,6 +5,12 @@ export enum ReponseStatus {
     NOTGOING = 3,
     NORESPONSE = 4,
 }
-export function sadd() {
-    alert("asdasd");
+
+export function statusText() {
+    return {
+        1: "Going",
+        2: "Maybe",
+        3: "Not Going",
+        4: "No Response",
+    };
 }

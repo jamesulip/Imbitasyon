@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Inertia\Inertia;
 use App\Models\Event;
 use App\Models\Invited;
 use Illuminate\Http\Request;
@@ -52,7 +53,7 @@ class InvitedController extends Controller
     public function show(Invited $invited)
     {
         //
-        return "You are invited";
+        return Inertia::render('Invite/_invite');
     }
 
     /**
@@ -76,7 +77,7 @@ class InvitedController extends Controller
     public function update(UpdateInvitedRequest $request, $invited)
     {
         //
-        $invited = Invited::findOrFail($invited);
+        $invited = Invited::whereCode($invited)->first();
         $invited = $invited->fill($request->all());
         $invited->save();
         return $invited;

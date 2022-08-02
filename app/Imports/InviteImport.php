@@ -14,13 +14,17 @@ class InviteImport implements ToModel
      */
     public function model(array $row)
     {
-        return new Invited([
-            //
-            'name'     => $row[0],
-            'code'    => $row[1] ?? \Str::random(4),
-            'event_id'    => 1,
-            'response_id'    => 1,
-            'attending'    => 0,
-        ]);
+        return Invited::updateOrCreate(
+            [
+                'code'    => $row[1],
+            ],
+            [
+                'name'     => $row[0],
+                'code'    => $row[1] ?? \Str::random(4),
+                'event_id'    => 1,
+                'response_id'    => 1,
+                'attending'    => 0,
+            ]
+        );
     }
 }

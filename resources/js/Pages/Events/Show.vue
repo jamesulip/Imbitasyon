@@ -5,12 +5,25 @@ import { Inertia } from "@inertiajs/inertia";
 import InvitationStatus from "@/Components/InvitationResponse.vue";
 import ImportInvited from "@/Components/ImportInvited.vue";
 import { Link } from "@inertiajs/inertia-vue3";
-const { pEvent, invited } = defineProps({
+
+import { statusText, ReponseStatus } from "@/enum/status";
+const stats = [
+    { name: "Total Subscribers", stat: "71,897" },
+    { name: "Avg. Open Rate", stat: "58.16%" },
+    { name: "Avg. Click Rate", stat: "24.57%" },
+];
+const { pEvent, invited, dashboard } = defineProps({
     pEvent: {
         type: Object,
         default: () => {},
     },
     invited: {
+        type: Object,
+        default: () => {
+            data: [];
+        },
+    },
+    dashboard: {
         type: Object,
         default: () => {
             data: [];
@@ -32,16 +45,35 @@ function submit() {
         </template>
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <h2
-                    class="max-w-6xl mx-auto mt-8 px-4 text-lg leading-6 font-medium text-gray-900 sm:px-6 lg:px-8"
-                >
-                    <div class="flex gap-3 justify-between items-center">
-                        Invited
-                        <ImportInvited />
-                    </div>
-                </h2>
                 <div class="">
                     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div>
+                            <h3
+                                class="text-lg leading-6 font-medium text-gray-900"
+                            >
+                                <!-- <ImportInvited /> -->
+                            </h3>
+                            <dl
+                                class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-3"
+                            >
+                                <div
+                                    v-for="item in dashboard"
+                                    :key="item.name"
+                                    class="px-4 py-5 bg-white shadow rounded-lg overflow-hidden sm:p-6"
+                                >
+                                    <dt
+                                        class="text-sm font-medium text-gray-500 truncate"
+                                    >
+                                        {{ statusText()[item.response_id] }}
+                                    </dt>
+                                    <dd
+                                        class="mt-1 text-3xl font-semibold text-gray-900"
+                                    >
+                                        {{ item.respondent }}
+                                    </dd>
+                                </div>
+                            </dl>
+                        </div>
                         <div class="flex flex-col mt-2">
                             <div
                                 class="align-middle min-w-full overflow-x-auto shadow overflow-hidden sm:rounded-lg"
@@ -77,7 +109,7 @@ function submit() {
                                                 Attendees
                                             </th>
                                             <th
-                                                class="hidden px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider md:block"
+                                                class="px-6 py-3 bg-gray-50 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
                                                 scope="col"
                                             >
                                                 Status
@@ -106,10 +138,7 @@ function submit() {
                                                     <img
                                                         class="w-52 h-auto"
                                                         :src="`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${$inertia.page.props.appName.url}/invitation/${invite.code}`"
-                                                    />{{
-                                                        `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${$inertia.page.props.appName.url}/invitation/${invite.code}`
-                                                    }}</a
-                                                >
+                                                /></a>
                                             </td>
                                             <td
                                                 class="max-w-0 w-full px-6 py-4 whitespace-nowrap text-sm text-gray-900"
@@ -135,10 +164,14 @@ function submit() {
                                                     >{{ invite.code }}
                                                 </span>
                                             </td>
-                                            <!-- <td
+                                            <td
                                                 class="px-6 py-4 text-right whitespace-nowrap text-sm text-gray-500"
                                             >
                                                 <span
+                                                    v-if="
+                                                        invite.response_id ==
+                                                        ReponseStatus.GOING
+                                                    "
                                                     class="text-gray-900 font-medium"
                                                     >{{ invite.attending }}
                                                 </span>
@@ -161,7 +194,7 @@ function submit() {
                                                         invite.created_at
                                                     }}</time
                                                 >
-                                            </td> -->
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>

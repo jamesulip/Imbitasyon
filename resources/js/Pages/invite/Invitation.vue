@@ -104,16 +104,7 @@
                 </div>
             </div>
 
-            <!-- <div class="h-[50vh] flex">
-                <div class="text-center m-auto">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Deleniti molestiae debitis delectus dolores accusamus,
-                    pariatur aut mollitia eius, nisi sapiente cum. Nihil, vitae?
-                    Quidem ratione veniam tempora non eum libero.
-                </div>
-            </div> -->
-            <div class="h-screen flex">
-                <!-- create 2 column list -->
+            <div class="py-5 flex">
                 <div class="mx-auto text-sm md:text-2xl">
                     <h4
                         data-aos="zoom-in"
@@ -126,43 +117,43 @@
                     <div class="flex gap-3 mx-auto text-sm md:text-2xl">
                         <ul class="">
                             <li data-aos="fade-right" class="text-right">
-                                Dir. Roselle Delos Reyes
+                                Cong. Joel R. Chua
                             </li>
                             <li data-aos="fade-right" class="text-right">
-                                Ms. Ritchelle Marie Pobre
+                                Hon. Terrence Alibarbar
                             </li>
                             <li data-aos="fade-right" class="text-right">
-                                Hon. Joy Villamar
+                                Hon. Fog Abante
                             </li>
                             <li data-aos="fade-right" class="text-right">
-                                Mrs. Helen Abdosan
+                                Hon. Elmo Canino
                             </li>
                             <li data-aos="fade-right" class="text-right">
-                                Hon. Maile Atienza
+                                Hon. Melchor Garin
                             </li>
                             <li data-aos="fade-right" class="text-right">
-                                Mrs. Hilda Vicencio
+                                Hon. Eddie Yu Jazmin
                             </li>
                             <li data-aos="fade-right" class="text-right">
-                                Mrs. Mabel Leon
+                                Mr. Anthony Jude Roño
                             </li>
                             <li data-aos="fade-right" class="text-right">
-                                Mrs. Norma Reyes
+                                Mr. Alvin Reyes
                             </li>
                             <li data-aos="fade-right" class="text-right">
-                                Mrs. Chariza Calib-og
+                                Mr. Hermie Sandiego
                             </li>
                             <li data-aos="fade-right" class="text-right">
-                                Mrs. Rachelle Silorio
+                                Mr. Christopher Benegay
                             </li>
                             <li data-aos="fade-right" class="text-right">
-                                Mrs. Marie Author
+                                Mr. Christian Quintana
                             </li>
                             <li data-aos="fade-right" class="text-right">
-                                Mrs. Rizza Pillos
+                                Mr. Edwin Rioveros
                             </li>
                             <li data-aos="fade-right" class="text-right">
-                                Mrs. Analyn Suan
+                                Mr. Dominador Laylo
                             </li>
                         </ul>
                         <ul>
@@ -209,16 +200,185 @@
                     </div>
                 </div>
             </div>
+            <div class="py-5 flex">
+                <div class="mx-auto flex flex-col text-sm md:text-2xl">
+                    <h4
+                        data-aos="zoom-in"
+                        class="text-center uppercase"
+                        style="font-family: 'century gothic'"
+                    >
+                        Secondary Sponsors
+                    </h4>
+
+                    <div class="flex gap-3 mx-auto text-sm md:text-2xl">
+                        <ul class="">
+                            <li
+                                data-aos="fade-right"
+                                class="text-right font-semibold"
+                            >
+                                BEST MAN
+                            </li>
+                            <li data-aos="fade-right" class="text-right mb-5">
+                                Mr. Tyron Buenavista
+                            </li>
+                            <li
+                                data-aos="fade-right"
+                                class="text-right font-semibold"
+                            >
+                                GROOMSMEN
+                            </li>
+                            <li data-aos="fade-right" class="text-right">
+                                Mr. John Kyle Mariano
+                            </li>
+                            <li data-aos="fade-right" class="text-right">
+                                Mr. Rendell Valenzuela
+                            </li>
+                            <li data-aos="fade-right" class="text-right">
+                                Mr. Rodolfo Bajaro Jr.
+                            </li>
+                            <li data-aos="fade-right" class="text-right">
+                                Mr. Michael Sean Roño
+                            </li>
+                        </ul>
+                        <ul>
+                            <li
+                                data-aos="fade-left"
+                                class="text-left font-semibold"
+                            >
+                                MAID OF HONOR
+                            </li>
+                            <li data-aos="fade-left" class="text-left mb-5">
+                                Ms. Riza Grace Calib-og
+                            </li>
+                            <li
+                                data-aos="fade-left"
+                                class="text-left font-semibold"
+                            >
+                                BRIDESMAID
+                            </li>
+                            <li data-aos="fade-left" class="text-left">
+                                Ms. Reisha Silorio
+                            </li>
+                            <li data-aos="fade-left" class="text-left">
+                                Ms. Rose Ann Ernesto
+                            </li>
+                            <li data-aos="fade-left" class="text-left">
+                                Ms. Hiyas Kim Endrano
+                            </li>
+                            <li data-aos="fade-left" class="text-left">
+                                Mrs. Klarenz Roño
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="flex gap-3 mx-auto text-sm md:text-2xl">
+                        <ul class="">
+                            <li
+                                data-aos="fade-right"
+                                class="text-right font-semibold"
+                            >
+                                CORD
+                            </li>
+                            <li data-aos="fade-right" class="text-right mb-5">
+                                Ms. Fern Fabroa
+                            </li>
+                            <li data-aos="fade-right" class="text-right mb-5">
+                                Mr. Johnver Reyes
+                            </li>
+                        </ul>
+                        <ul>
+                            <li
+                                data-aos="fade-left"
+                                class="text-left font-semibold"
+                            >
+                                VIEL
+                            </li>
+                            <li data-aos="fade-left" class="text-left mb-5">
+                                Ms. Raven Valenzuela
+                            </li>
+                            <li data-aos="fade-left" class="text-left mb-5">
+                                Mr. James Ulip
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex gap-3 mx-auto text-sm md:text-2xl">
+                        <ul class="">
+                            <li
+                                data-aos="fade-right"
+                                class="text-center font-semibold"
+                            >
+                                RING BEARER
+                            </li>
+                            <li data-aos="fade-right" class="text-center mb-5">
+                                Zach Miguel Roño
+                            </li>
+                            <li
+                                data-aos="fade-left"
+                                class="text-center font-semibold"
+                            >
+                                COIN BEARER
+                            </li>
+                            <li data-aos="fade-left" class="text-center mb-5">
+                                John Matthew Roño
+                            </li>
+                            <li data-aos="fade-left" class="text-center">
+                                KYLIE RAINN REYES
+                            </li>
+                            <li
+                                data-aos="fade-right"
+                                class="text-center font-semibold"
+                            >
+                                BIBLE BEARER
+                            </li>
+                            <li data-aos="fade-right" class="text-center mb-5">
+                                Lance Lohnard Salen
+                            </li>
+                            <li
+                                data-aos="fade-right"
+                                class="text-center font-semibold"
+                            >
+                                FLOWER GIRL
+                            </li>
+                            <li data-aos="fade-left" class="text-center">
+                                Erin Kale Skye Reyes
+                            </li>
+                            <li data-aos="fade-left" class="text-center">
+                                Athalia Ryzane Dela Cruz
+                            </li>
+                            <li data-aos="fade-left" class="text-center">
+                                John Maverick Medina
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="p-5 flex">
+                <div class="mx-auto text-sm md:text-2xl">
+                    <span> Attire </span>
+                    <br />
+                    Sponsors: Formal in the hues of brown Guests: Formal or
+                    semi-formal in the hues of brown
+                    <br /><br />
+                    <span> Gift Guide </span><br />
+                    We have been truly blessed with everything we have. However,
+                    if you must give, we recommend a monetary present.
+                </div>
+            </div>
             <div class="h-screen w-full flex" id="rvsp">
                 <div
-                    class="m-auto text-md md:text-3xl text-center"
-                    style="font-family: amalfi-coast"
+                    class="mx-auto mt-10 text-md md:text-3xl text-center"
+                    style="font-family: 'century gothic'"
                 >
                     <div class="pb-12">
-                        kindly rsvp <br />
+                        <span class="leading-loose text-2xl uppercase"
+                            >r s v p</span
+                        >
+                        <br />
                         We hope you can join us!
+                        <br />
+                        Kindly reply by <b>August 14, 2022</b>
                     </div>
-                    <div class="flex flex-col gap-6">
+                    <div class="flex flex-col gap-6 w-80 mx-auto">
                         <div
                             v-for="response in plans"
                             :key="response.id"
@@ -229,65 +389,68 @@
                                 name="notification-method"
                                 type="radio"
                                 :value="response.id"
-                                :checked="response.id === ReponseStatus.MAYBE"
                                 class="focus:ring-yellow-500 h-12 w-12 text-yellow-600 border-gray-300"
-                                v-model="selReponse"
+                                v-model="code.response_id"
                             />
                             <label
                                 :for="response.id"
-                                class="ml-3 block text-2xl font-semibold text-black"
+                                class="ml-3 block text-2xl text-left font-semibold text-black"
                             >
                                 {{ response.name }}
                             </label>
                         </div>
-                        <div class="mt-10">
-                            <div v-if="selReponse == ReponseStatus.GOING">
-                                How many person will attend?
-                                <div class="flex gap-5">
-                                    <button @click="code.attending++">-</button>
+                        <div class="mt-10 w-full">
+                            <div
+                                v-show="code.response_id == ReponseStatus.GOING"
+                            >
+                                How many guest will attend?
+                                <div class="flex gap-5 items-center my-5">
+                                    <div>
+                                        <button
+                                            class="bg-white dark:bg-yellow-800 p-2 w-10 h-10 ring-1 ring-yellow-900/5 dark:ring-yellow-200/20 shadow-lg rounded-full flex items-center justify-center"
+                                            @click="code.attending--"
+                                        >
+                                            -
+                                        </button>
+                                    </div>
                                     <input
                                         type="number"
                                         min="1"
                                         max="20"
                                         name="name"
                                         id="name"
-                                        class="mt-0 h-16 block w-full px-0.5 border-0 border-b-2 border-gray-200 focus:ring-0 focus:border-black"
+                                        class="mt-0 h-16 block w-full text-center px-0.5 border-0 border-b-2 border-gray-200 focus:ring-0 focus:border-black text-3xl"
                                         v-model="code.attending"
                                     />
-                                    <button @click="code.attending++">+</button>
+                                    <div>
+                                        <button
+                                            class="bg-white dark:bg-yellow-800 p-2 w-10 h-10 ring-1 ring-yellow-900/5 dark:ring-yellow-200/20 shadow-lg rounded-full flex items-center justify-center"
+                                            @click="code.attending++"
+                                        >
+                                            +
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
-                            <div v-else-if="selReponse == ReponseStatus.MAYBE">
-                                MAYBE
+                            <!-- <div
+                                v-show="code.response_id == ReponseStatus.GOING"
+                            >
+                                GOING
                             </div>
                             <div
-                                v-else-if="selReponse == ReponseStatus.NOTGOING"
-                            >
-                                NOTGOING
-                            </div>
+                                v-show="
+                                    code.response_id == ReponseStatus.NOTGOING
+                                "
+                            ></div> -->
                         </div>
+
+                        <Response :invitation="code" />
                     </div>
                 </div>
             </div>
-            <div class="bg-gray-200 text-center p-2 sticky bottom-0 z-50">
-                <a href="#rvsp">
-                    <!-- <div class="flex justify-center gap-3">
-                        <button
-                            @click="going"
-                            class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full"
-                        >
-                            Going
-                        </button>
-                        <button
-                            @click="notGoing"
-                            class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full"
-                        >
-                            Not Going
-                        </button>
-                    </div> -->
-                    Click here to respond
-                </a>
-            </div>
+            <!-- <div class="bg-gray-200 text-center p-2 bottom-0 z-50">
+                <a href="#rvsp"> Click here to respond </a>
+            </div> -->
         </div>
     </div>
 </template>
@@ -296,24 +459,22 @@ import axios from "axios";
 import { ReponseStatus } from "@/enum/status";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Response from "../../Components/Response.vue";
+
 onMounted(() => {
     AOS.init();
 });
 const plans = [
     {
         id: ReponseStatus.GOING,
-        name: "Going",
+        name: "Gladly Accepts",
     },
-    {
-        id: ReponseStatus.MAYBE,
-        name: "Maybe",
-    },
+
     {
         id: ReponseStatus.NOTGOING,
-        name: "Not Going",
+        name: "Regretfully Declines",
     },
 ];
-const selReponse = ref(ReponseStatus.MAYBE);
 const { code: invitation, event } = defineProps({
     code: {
         type: Object,
@@ -324,6 +485,28 @@ const { code: invitation, event } = defineProps({
         default: () => {},
     },
 });
+// watch invitation
+watch(
+    invitation,
+    (val, old) => {
+        if (old.response_id != val.response_id) {
+            if (val.response_id == ReponseStatus.GOING) {
+                val.attending = 1;
+            } else {
+                val.attending = 0;
+            }
+        } else {
+            if (val.response_id == ReponseStatus.GOING) {
+                if (val.attending < 1) {
+                    val.attending = 1;
+                }
+            } else {
+                val.attending = 0;
+            }
+        }
+    },
+    { deep: true }
+);
 function getMonthName(month: number) {
     const months = [
         "January",

@@ -54,9 +54,23 @@ class EventController extends Controller
     public function show($id)
     {
         //
+        $invitedC = Invited::groupBy('response_id')->with('response')
+            ->selectRaw('sum(
+            CASE
+                WHEN response_id = 1
+                THEN attending
+                ELSE 0
+            END
+        ) as total_attendee,count(*) as respondent, response_id')
+            ->get();
         $event = Event::findOrFail($id);
-        $invited = Invited::with('response')->where('event_id', $id)->paginate(100);
-        return Inertia::render('Events/Show')->with(['pEvent' => $event, 'invited' => $invited]);
+        $invited = Invited::with('response')->where('event_id', $id)
+            ->when(request()->has('response_id'), function ($query) {
+                $query->where('response_id', request('response_id'));
+            })
+            ->paginate(100);
+
+        return Inertia::render('Events/Show')->with(['dashboard' => $invitedC, 'pEvent' => $event, 'invited' => $invited]);
     }
     public function edit($id)
     {
