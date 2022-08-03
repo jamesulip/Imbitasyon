@@ -7,7 +7,19 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
 
-    <title inertia>{{ config('app.name', 'Laravel') }}</title>
+    <meta property="og:site_name" content="Ardee and Randy Wedding">
+    <meta property="og:title" content="Ardee and Randy Wedding">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en">
+    <meta property="og:url" content="https://laravelsecrets.com/">
+    <meta property="og:image" content="{{ asset('images/DSCF8585.jpg') }}">
+
+
+
+
+
+    <title inertia>Ardee and Randy Wedding</title>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">

@@ -99,6 +99,6 @@ class InvitedController extends Controller
         $imports =  Excel::import(new InviteImport, request()->file('import'));
         $event = Event::findOrFail($req->event_id);
         $invited = Invited::with('response')->where('event_id', $req->event_id)->paginate(100);
-        return redirect()->route('events.show', $req->event_id)->with([]);
+        return redirect()->route('events.show', $req->event_id);
     }
 }

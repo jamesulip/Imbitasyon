@@ -21,10 +21,11 @@ use App\Http\Controllers\InvitedController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-
-Route::group(['middleware' => ['guest']], function () {
+Route::group(['middleware' => 'auth:sanctum'], function () {
+    Route::post('import-invited', [InvitedController::class, 'import']);
     Route::apiResource('events', EventController::class);
     Route::apiResource('invited', InvitedController::class);
-    Route::post('import-invited', [InvitedController::class, 'import']);
     Route::resource('responses', Response::class);
+});
+Route::group(['middleware' => ['guest']], function () {
 });
