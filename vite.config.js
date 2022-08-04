@@ -3,9 +3,7 @@ import laravel from "laravel-vite-plugin";
 import vue from "@vitejs/plugin-vue";
 import AutoImport from "unplugin-auto-import/vite";
 export default defineConfig({
-    server: {
-        host: "localhost",
-    },
+    server: {},
     plugins: [
         laravel({
             input: "resources/js/app.js",
