@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use App\Http\Requests\StoreEventRequest;
 use App\Models\Invited;
+use App\Models\Response;
 use Illuminate\Support\Facades\Redirect;
 
 class EventController extends Controller
@@ -54,7 +55,8 @@ class EventController extends Controller
     public function show($id)
     {
         //
-        $invitedC = Invited::groupBy('response_id')->with('response')
+        $event = Event::with('invited')->findOrFail($id);
+        $reponse_group = Invited::groupBy('response_id')->with('response')
             ->selectRaw('sum(
             CASE
                 WHEN response_id = 1
@@ -63,14 +65,29 @@ class EventController extends Controller
             END
         ) as total_attendee,count(*) as respondent, response_id')
             ->get();
-        $event = Event::findOrFail($id);
+        $dashboardData = [
+            'total_attendees' => $event->invited->where('response_id', Response::GOING)->sum('attending'),
+            'reponses' => $reponse_group
+        ];
+
+        // $dashboardData = Invited::groupBy('response_id')->with('response')
+        //     ->selectRaw('sum(
+        //     CASE
+        //         WHEN response_id = 1
+        //         THEN attending
+        //         ELSE 0
+        //     END
+        // ) as total_attendee,count(*) as respondent, response_id')
+        //     ->get();
+
+
         $invited = Invited::with('response')->where('event_id', $id)
             ->when(request()->has('response_id'), function ($query) {
                 $query->where('response_id', request('response_id'));
             })
             ->paginate(100);
 
-        return Inertia::render('Events/Show')->with(['dashboard' => $invitedC, 'pEvent' => $event, 'invited' => $invited]);
+        return Inertia::render('Events/Show')->with(['dashboard' => $dashboardData, 'pEvent' => $event, 'invited' => $invited]);
     }
     public function edit($id)
     {

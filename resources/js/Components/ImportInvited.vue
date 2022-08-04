@@ -1,5 +1,6 @@
 <script>
 import { useForm } from "@inertiajs/inertia-vue3";
+import { Inertia } from "@inertiajs/inertia";
 export default {
     setup() {
         const form = useForm({
@@ -8,9 +9,13 @@ export default {
         });
 
         function submit() {
-            form.post("/api/import-invited");
+            Inertia.post("/import-invited", form);
         }
 
+        Inertia.on("invalid", (event) => {
+            event.preventDefault();
+            // Handle the invalid response yourself
+        });
         return { form, submit };
     },
 };

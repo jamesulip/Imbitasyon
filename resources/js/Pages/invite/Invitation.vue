@@ -15,8 +15,8 @@
                     class="w-full absolute top-0 left-0 sm:p-12 p-11 text-white"
                 >
                     <div
-                        class="sm:text-3xl -rotate-45"
-                        style="font-family: amalfi-coast"
+                        class="sm:text-3xl"
+                        style="font-family: 'century gothic'"
                     >
                         You are invited, <br />{{ code.name }}
                     </div>
