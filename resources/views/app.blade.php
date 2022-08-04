@@ -30,7 +30,7 @@
     @inertiaHead
 </head>
 
-<body class="font-sans antialiased">
+<body class="font-sans antialiased  bg-repeat-round" style="background-image: url(/img/13264.jpg)">
     @inertia
 </body>
 

@@ -1,5 +1,5 @@
 <template>
-    <div class="flex bg-hero-pattern">
+    <div class="flex">
         <div class="grid col-span-1 mx-auto relative max-w-3xl">
             <div class="grid grid-cols-1 relative" data-aos="zoom-in">
                 <div class="bg-gray-800 col-span-1">
@@ -104,254 +104,222 @@
                 </div>
             </div>
 
-            <div class="py-5 flex">
-                <div class="mx-auto text-sm md:text-2xl">
-                    <h4
-                        data-aos="zoom-in"
-                        class="text-center uppercase"
-                        style="font-family: 'century gothic'"
-                    >
-                        Principal Sponsors
-                    </h4>
+            <table
+                dir="ltr"
+                class="text-xl md:text-2xl"
+                cellspacing="0"
+                cellpadding="0"
+            >
+                <colgroup>
+                    <col width="180" />
+                    <col width="180" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <td colspan="2" class="text-center">
+                            Principal Sponsors
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Cong. Atty. Joel R. Chua</td>
+                        <td>Dir. Roselle Delos Reyes</td>
+                    </tr>
+                    <tr>
+                        <td>Hon. Terrence Alibarbar</td>
+                        <td>Ms. Ritchelle Marie Pobre</td>
+                    </tr>
+                    <tr>
+                        <td>Hon. Fog Abante</td>
+                        <td>Hon. Joy Villamar</td>
+                    </tr>
+                    <tr>
+                        <td>Hon. Elmo Canino</td>
+                        <td>Mrs. Helen Abdosan</td>
+                    </tr>
+                    <tr>
+                        <td>Hon. Melchor Garin</td>
+                        <td>Hon. Maile Atienza</td>
+                    </tr>
+                    <tr>
+                        <td>Hon. Eddie Yu Jazmin</td>
+                        <td>Mrs. Hilda Vicencio</td>
+                    </tr>
+                    <tr>
+                        <td>Mr. Anthony Jude Ro&ntilde;o</td>
+                        <td>Mrs. Mabel Leon</td>
+                    </tr>
+                    <tr>
+                        <td>Mr. Alvin Reyes</td>
+                        <td>Mrs. Norma Reyes</td>
+                    </tr>
+                    <tr>
+                        <td>Mr. Hermie Sandiego</td>
+                        <td>Mrs. Chariza Calib-og</td>
+                    </tr>
+                    <tr>
+                        <td>Mr. Christopher Benegay</td>
+                        <td>Mrs. Rachel Silorio</td>
+                    </tr>
+                    <tr>
+                        <td>Mr. Christian Quintana</td>
+                        <td>Mrs. Marie Author</td>
+                    </tr>
+                    <tr>
+                        <td>Mr. Edwin Rioveros</td>
+                        <td>Mrs. Rizza Pillos</td>
+                    </tr>
+                    <tr>
+                        <td>Mr. Dominador Laylo</td>
+                        <td>Mrs. Analyn Suan</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="text-center">
+                            Secondary Sponsors
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>BEST MAN</td>
+                        <td>MAID OF HONOR</td>
+                    </tr>
+                    <tr>
+                        <td>Mr. Tyron Buenavista</td>
+                        <td>Ms. Riza Grace Calib-og</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>GROOMSMEN</td>
+                        <td>BRIDESMAID</td>
+                    </tr>
+                    <tr>
+                        <td>Mr. John Kyle Mariano</td>
+                        <td>Ms. Reisha Silorio</td>
+                    </tr>
+                    <tr>
+                        <td>Mr. Rendell Valenzuela</td>
+                        <td>Ms. Rose Ann Ernesto</td>
+                    </tr>
+                    <tr>
+                        <td>Mr. Rodolfo Bajaro Jr.</td>
+                        <td>Ms. Hiyas Kim Endrano</td>
+                    </tr>
+                    <tr>
+                        <td>Mr. Michael Sean Ro&ntilde;o</td>
+                        <td>Mrs. Klarenz Ro&ntilde;o</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>CORD</td>
+                        <td>VEIL</td>
+                    </tr>
+                    <tr>
+                        <td>Ms. Fern Fabroa</td>
+                        <td>Ms. Raven Valenzuela</td>
+                    </tr>
+                    <tr>
+                        <td>Mr. Johnver Reyes</td>
+                        <td>Mr. James Ulip</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="text-center">CANDLE</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="text-center">
+                            Ms. Kristel Pae Reyes
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="text-center">
+                            Mr. Aldrich Ro&ntilde;o
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="text-center">RING BEARER</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="text-center">
+                            Zach Miguel Ro&ntilde;o
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="text-center">COIN BEARER</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="text-center">
+                            John Matthew Ro&ntilde;o
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="text-center">
+                            with Kylie Rainn Reyes
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="text-center">BIBLE BEARER</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="text-center">
+                            Lance Lohnard Salen
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="text-center">
+                            FLOWER GIRLS &amp; ESCORT
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="text-center">
+                            Erin Kale Skye Reyes
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="text-center">
+                            Athalia Ryzane Dela Cruz &amp; John Maverick Medina
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="text-center">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="text-center">LITTLE BRIDE</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="text-center">
+                            Kyrie Vielle Valenzuela
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
 
-                    <div class="flex gap-3 mx-auto text-sm md:text-2xl">
-                        <ul class="">
-                            <li data-aos="fade-right" class="text-right">
-                                Cong. Joel R. Chua
-                            </li>
-                            <li data-aos="fade-right" class="text-right">
-                                Hon. Terrence Alibarbar
-                            </li>
-                            <li data-aos="fade-right" class="text-right">
-                                Hon. Fog Abante
-                            </li>
-                            <li data-aos="fade-right" class="text-right">
-                                Hon. Elmo Canino
-                            </li>
-                            <li data-aos="fade-right" class="text-right">
-                                Hon. Melchor Garin
-                            </li>
-                            <li data-aos="fade-right" class="text-right">
-                                Hon. Eddie Yu Jazmin
-                            </li>
-                            <li data-aos="fade-right" class="text-right">
-                                Mr. Anthony Jude Roño
-                            </li>
-                            <li data-aos="fade-right" class="text-right">
-                                Mr. Alvin Reyes
-                            </li>
-                            <li data-aos="fade-right" class="text-right">
-                                Mr. Hermie Sandiego
-                            </li>
-                            <li data-aos="fade-right" class="text-right">
-                                Mr. Christopher Benegay
-                            </li>
-                            <li data-aos="fade-right" class="text-right">
-                                Mr. Christian Quintana
-                            </li>
-                            <li data-aos="fade-right" class="text-right">
-                                Mr. Edwin Rioveros
-                            </li>
-                            <li data-aos="fade-right" class="text-right">
-                                Mr. Dominador Laylo
-                            </li>
-                        </ul>
-                        <ul>
-                            <li data-aos="fade-left" class="text-left">
-                                Dir. Roselle Delos Reyes
-                            </li>
-                            <li data-aos="fade-left" class="text-left">
-                                Ms. Ritchelle Marie Pobre
-                            </li>
-                            <li data-aos="fade-left" class="text-left">
-                                Hon. Joy Villamar
-                            </li>
-                            <li data-aos="fade-left" class="text-left">
-                                Mrs. Helen Abdosan
-                            </li>
-                            <li data-aos="fade-left" class="text-left">
-                                Hon. Maile Atienza
-                            </li>
-                            <li data-aos="fade-left" class="text-left">
-                                Mrs. Hilda Vicencio
-                            </li>
-                            <li data-aos="fade-left" class="text-left">
-                                Mrs. Mabel Leon
-                            </li>
-                            <li data-aos="fade-left" class="text-left">
-                                Mrs. Norma Reyes
-                            </li>
-                            <li data-aos="fade-left" class="text-left">
-                                Mrs. Chariza Calib-og
-                            </li>
-                            <li data-aos="fade-left" class="text-left">
-                                Mrs. Rachelle Silorio
-                            </li>
-                            <li data-aos="fade-left" class="text-left">
-                                Mrs. Marie Author
-                            </li>
-                            <li data-aos="fade-left" class="text-left">
-                                Mrs. Rizza Pillos
-                            </li>
-                            <li data-aos="fade-left" class="text-left">
-                                Mrs. Analyn Suan
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="py-5 flex">
-                <div class="mx-auto flex flex-col text-sm md:text-2xl">
-                    <h4
-                        data-aos="zoom-in"
-                        class="text-center uppercase"
-                        style="font-family: 'century gothic'"
-                    >
-                        Secondary Sponsors
-                    </h4>
-
-                    <div class="flex gap-3 mx-auto text-sm md:text-2xl">
-                        <ul class="">
-                            <li
-                                data-aos="fade-right"
-                                class="text-right font-semibold"
-                            >
-                                BEST MAN
-                            </li>
-                            <li data-aos="fade-right" class="text-right mb-5">
-                                Mr. Tyron Buenavista
-                            </li>
-                            <li
-                                data-aos="fade-right"
-                                class="text-right font-semibold"
-                            >
-                                GROOMSMEN
-                            </li>
-                            <li data-aos="fade-right" class="text-right">
-                                Mr. John Kyle Mariano
-                            </li>
-                            <li data-aos="fade-right" class="text-right">
-                                Mr. Rendell Valenzuela
-                            </li>
-                            <li data-aos="fade-right" class="text-right">
-                                Mr. Rodolfo Bajaro Jr.
-                            </li>
-                            <li data-aos="fade-right" class="text-right">
-                                Mr. Michael Sean Roño
-                            </li>
-                        </ul>
-                        <ul>
-                            <li
-                                data-aos="fade-left"
-                                class="text-left font-semibold"
-                            >
-                                MAID OF HONOR
-                            </li>
-                            <li data-aos="fade-left" class="text-left mb-5">
-                                Ms. Riza Grace Calib-og
-                            </li>
-                            <li
-                                data-aos="fade-left"
-                                class="text-left font-semibold"
-                            >
-                                BRIDESMAID
-                            </li>
-                            <li data-aos="fade-left" class="text-left">
-                                Ms. Reisha Silorio
-                            </li>
-                            <li data-aos="fade-left" class="text-left">
-                                Ms. Rose Ann Ernesto
-                            </li>
-                            <li data-aos="fade-left" class="text-left">
-                                Ms. Hiyas Kim Endrano
-                            </li>
-                            <li data-aos="fade-left" class="text-left">
-                                Mrs. Klarenz Roño
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="flex gap-3 mx-auto text-sm md:text-2xl">
-                        <ul class="">
-                            <li
-                                data-aos="fade-right"
-                                class="text-right font-semibold"
-                            >
-                                CORD
-                            </li>
-                            <li data-aos="fade-right" class="text-right mb-5">
-                                Ms. Fern Fabroa
-                            </li>
-                            <li data-aos="fade-right" class="text-right mb-5">
-                                Mr. Johnver Reyes
-                            </li>
-                        </ul>
-                        <ul>
-                            <li
-                                data-aos="fade-left"
-                                class="text-left font-semibold"
-                            >
-                                VIEL
-                            </li>
-                            <li data-aos="fade-left" class="text-left mb-5">
-                                Ms. Raven Valenzuela
-                            </li>
-                            <li data-aos="fade-left" class="text-left mb-5">
-                                Mr. James Ulip
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="flex gap-3 mx-auto text-sm md:text-2xl">
-                        <ul class="">
-                            <li
-                                data-aos="fade-right"
-                                class="text-center font-semibold"
-                            >
-                                RING BEARER
-                            </li>
-                            <li data-aos="fade-right" class="text-center mb-5">
-                                Zach Miguel Roño
-                            </li>
-                            <li
-                                data-aos="fade-left"
-                                class="text-center font-semibold"
-                            >
-                                COIN BEARER
-                            </li>
-                            <li data-aos="fade-left" class="text-center mb-5">
-                                John Matthew Roño
-                            </li>
-                            <li data-aos="fade-left" class="text-center">
-                                KYLIE RAINN REYES
-                            </li>
-                            <li
-                                data-aos="fade-right"
-                                class="text-center font-semibold"
-                            >
-                                BIBLE BEARER
-                            </li>
-                            <li data-aos="fade-right" class="text-center mb-5">
-                                Lance Lohnard Salen
-                            </li>
-                            <li
-                                data-aos="fade-right"
-                                class="text-center font-semibold"
-                            >
-                                FLOWER GIRL
-                            </li>
-                            <li data-aos="fade-left" class="text-center">
-                                Erin Kale Skye Reyes
-                            </li>
-                            <li data-aos="fade-left" class="text-center">
-                                Athalia Ryzane Dela Cruz
-                            </li>
-                            <li data-aos="fade-left" class="text-center">
-                                John Maverick Medina
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
             <div class="p-5 flex">
                 <div class="mx-auto text-sm md:text-2xl">
                     <span> Attire </span>
@@ -546,3 +514,12 @@ function notGoing() {
     });
 }
 </script>
+<style>
+/* select first td on tr were no colspan*/
+tr td:first-child:nth-last-child(2) {
+    text-align: right;
+}
+tr td {
+    padding: 0px 0.5rem;
+}
+</style>
