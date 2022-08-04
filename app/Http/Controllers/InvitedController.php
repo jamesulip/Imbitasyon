@@ -8,6 +8,7 @@ use App\Models\Invited;
 use Illuminate\Http\Request;
 use App\Imports\InviteImport;
 use Maatwebsite\Excel\Facades\Excel;
+use Illuminate\Support\Facades\Redirect;
 use App\Http\Requests\StoreInvitedRequest;
 use App\Http\Requests\UpdateInvitedRequest;
 
@@ -89,16 +90,16 @@ class InvitedController extends Controller
      * @param  \App\Models\Invited  $invited
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Invited $invited)
+    public function destroy(Invited $invited, Request $req)
     {
-        //
+        //delete invited
+        $invited->delete();
     }
     public function import(Request $req)
     {
-
         $imports =  Excel::import(new InviteImport, request()->file('import'));
         $event = Event::findOrFail($req->event_id);
         $invited = Invited::with('response')->where('event_id', $req->event_id)->paginate(100);
-        return redirect()->route('events.show', $req->event_id);
+        return Redirect::route('events.show', $event->id)->with(['invited' => $invited]);
     }
 }

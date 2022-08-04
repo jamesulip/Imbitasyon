@@ -7,6 +7,7 @@ import ImportInvited from "@/Components/ImportInvited.vue";
 import { Link } from "@inertiajs/inertia-vue3";
 
 import { statusText, ReponseStatus } from "@/enum/status";
+import AddInvitation from "@/Components/AddInvitation.vue";
 const stats = [
     { name: "Total Subscribers", stat: "71,897" },
     { name: "Avg. Open Rate", stat: "58.16%" },
@@ -32,6 +33,12 @@ const { pEvent, invited, dashboard } = defineProps({
 });
 function submit() {
     Inertia.put(`/api/events/${route().params.event}`, pEvent);
+}
+function deleteInvite(id) {
+    // confirmation dialog delete
+    if (confirm("Are you sure you want to delete this invite?")) {
+        Inertia.delete(`/api/invited/${id}`);
+    }
 }
 </script>
 
@@ -73,6 +80,7 @@ function submit() {
                                     </dd>
                                 </div>
                             </dl>
+                            <AddInvitation />
                         </div>
                         <div class="flex flex-col mt-2">
                             <div
@@ -115,10 +123,16 @@ function submit() {
                                                 Status
                                             </th>
                                             <th
-                                                class="px-6 py-3 bg-gray-50 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                                class="px-6 py-3 bg-gray-50 whitespace-nowrap text-xs font-medium text-gray-500 uppercase tracking-wider"
                                                 scope="col"
                                             >
                                                 Response Date
+                                            </th>
+                                            <th
+                                                class="px-6 py-3 bg-gray-50 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                                scope="col"
+                                            >
+                                                Action
                                             </th>
                                         </tr>
                                     </thead>
@@ -186,14 +200,27 @@ function submit() {
                                             <td
                                                 class="px-6 py-4 text-right whitespace-nowrap text-sm text-gray-500"
                                             >
-                                                <time
+                                                <!-- <time
                                                     :datetime="
                                                         invite.created_at
                                                     "
                                                     >{{
                                                         invite.created_at
                                                     }}</time
+                                                > -->
+                                            </td>
+                                            <td
+                                                class="px-6 py-4 text-right whitespace-nowrap text-sm text-gray-500"
+                                            >
+                                                <!-- delete button -->
+                                                <button
+                                                    @click="
+                                                        deleteInvite(invite.id)
+                                                    "
+                                                    class="text-red-600 hover:text-red-900"
                                                 >
+                                                    Delete
+                                                </button>
                                             </td>
                                         </tr>
                                     </tbody>
