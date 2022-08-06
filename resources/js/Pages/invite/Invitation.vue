@@ -40,7 +40,7 @@
                     </div>
                 </div>
             </div>
-            <Gallery :gallery="event.gallery" />
+
             <div class="h-screen p-5 grid">
                 <div class="text-black h-[40vh] text-center flex">
                     <div
@@ -389,6 +389,7 @@
                     </p>
                 </div>
             </div>
+            <Gallery :gallery="event.gallery" />
             <div class="h-screen w-full flex" id="rvsp">
                 <div
                     class="mx-auto mt-10 text-md md:text-3xl text-center"
