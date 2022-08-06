@@ -27,7 +27,6 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function () {
     $events = \App\Models\Event::withCount('invited', 'invitedGoing')
-
         ->where('created_by', auth()->id())->get();
     return Inertia::render('Dashboard', [
         'events' => $events
@@ -37,6 +36,7 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::resource('events', EventController::class);
     Route::resource('invite', InvitedController::class);
 });
+Route::post('import-invited', [InvitedController::class, 'import']);
 Route::get('invitation/{invited:code}', function (Invited $invited) {
     $event = Event::with('invited')->find($invited->event_id);
     return Inertia::render('invite/Invitation', ['code' => $invited, 'event' => $event]);
