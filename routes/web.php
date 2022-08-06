@@ -38,7 +38,9 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
 });
 Route::post('import-invited', [InvitedController::class, 'import']);
 Route::get('invitation/{invited:code}', function (Invited $invited) {
-    $event = Event::with('invited')->find($invited->event_id);
+    $event = Event::with('invited', 'gallery')->find($invited->event_id);
+    $invited->last_opened = now();
+    $invited->save();
     return Inertia::render('invite/Invitation', ['code' => $invited, 'event' => $event]);
 });
 require __DIR__ . '/auth.php';
