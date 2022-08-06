@@ -16,7 +16,7 @@ class InviteImport implements ToModel
     {
         return Invited::updateOrCreate(
             [
-                'code'    => $row[1],
+                'code'    => $row[1] ?? null,
             ],
             [
                 'name'     => $row[0],
