@@ -29,4 +29,8 @@ class Event extends Model
     {
         return $this->hasMany(Invited::class, 'event_id')->where('response_id', Response::GOING);
     }
+    public function gallery()
+    {
+        return $this->hasMany(GalleryImage::class, 'event_id');
+    }
 }

@@ -6,3 +6,11 @@
     font-family: "amalfi-coast";
     src: local("amalfi-coast"), url(./amalfi-coast.ttf) format("truetype");
 }
+@font-face {
+    font-family: "century-gothic";
+    src: local("amalfi-coast"), url(./GOTHIC.TTF) format("truetype");
+}
+@font-face {
+    font-family: "century-gothicb";
+    src: local("amalfi-coast"), url(./GOTHICB.TTF) format("truetype");
+}
