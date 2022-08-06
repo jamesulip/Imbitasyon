@@ -483,10 +483,8 @@
 import axios from "axios";
 import { ReponseStatus } from "@/enum/status";
 import AOS from "aos";
-import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 import "aos/dist/aos.css";
 import Response from "../../Components/Response.vue";
-import "vue3-carousel/dist/carousel.css";
 import Gallery from "@/Components/Gallery.vue";
 
 onMounted(() => {
