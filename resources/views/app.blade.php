@@ -16,7 +16,7 @@
     <meta property="og:image" content="{{ asset('images/DSCF8585.jpg') }}">
 
 
-    @if(collect(request()->route()->parameters && collect(request()->route()->parameters['invited']))
+    @if(request()->route() && request()->route()->parameters && request()->route()->parameters['invited'])
     <meta property="og:site_name" content="Ardee and Randy Wedding">
     <meta property="og:title" content="Greetings {{request()->route()->parameters['invited']['name']}} you are invited to the wedding!">
     <meta property="og:description" content="Greetings {{request()->route()->parameters['invited']['name']}} you are invited to the wedding!">
