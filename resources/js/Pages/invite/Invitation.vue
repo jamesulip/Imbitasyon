@@ -1,5 +1,5 @@
 <template>
-    <div class="flex w-screen">
+    <div class="flex w-screen overflow-hidden">
         <div class="grid col-span-1 mx-auto relative max-w-3xl">
             <div class="grid grid-cols-1 relative" data-aos="zoom-in">
                 <div class="bg-gray-800 col-span-1">
@@ -79,7 +79,7 @@
                                 and marriage
                             </p>
 
-                            3pm <br />
+                            2:30pm <br />
                             <a
                                 target="_blank"
                                 class="text-blue-600 underline"
@@ -388,6 +388,16 @@
                         present.
                     </p>
                 </div>
+            </div>
+            <div class="mx-auto text-xl">
+                <p>
+                    Groom’s Gcash Account: <br />
+                    0956 406 3084
+                </p>
+                <p>
+                    Bride’s Gcash Account: <br />
+                    0915 179 2476
+                </p>
             </div>
             <Gallery :gallery="event.gallery" />
             <div class="h-screen w-full flex" id="rvsp">
