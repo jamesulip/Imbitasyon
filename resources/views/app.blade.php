@@ -8,8 +8,8 @@
 
     @if(collect(request()->route()->parameters))
     <meta property="og:site_name" content="Ardee and Randy Wedding">
-    <meta property="og:title" content="Ardee and Randy Wedding">
-    <meta property="og:description" content="Greetnigs {{request()->route()->parameters['invited']['name']}} you are invited to the wedding!">
+    <meta property="og:title" content="Greetings {{request()->route()->parameters['invited']['name']}} you are invited to the wedding!">
+    <meta property="og:description" content="Greetings {{request()->route()->parameters['invited']['name']}} you are invited to the wedding!">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en">
     <meta property="og:url" content="https://ardee-and-randy.link/">
