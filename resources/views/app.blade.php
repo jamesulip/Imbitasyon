@@ -6,17 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
-    <!--
+    @if(collect(request()->route()->parameters))
     <meta property="og:site_name" content="Ardee and Randy Wedding">
     <meta property="og:title" content="Ardee and Randy Wedding">
-    <meta property="og:description" content="">
+    <meta property="og:description" content="Greetnigs {{request()->route()->parameters['invited']['name']}} you are invited to the wedding!">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en">
-    <meta property="og:url" content="https://laravelsecrets.com/">
+    <meta property="og:url" content="https://ardee-and-randy.link/">
     <meta property="og:image" content="{{ asset('images/DSCF8585.jpg') }}">
- -->
-
-
+    @endif
 
 
     <title inertia>Ardee and Randy Wedding</title>

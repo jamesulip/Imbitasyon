@@ -487,16 +487,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Response from "../../Components/Response.vue";
 import Gallery from "@/Components/Gallery.vue";
-useHead({
-    // Can be static or computed
-    title: computed(() => "asd"),
-    meta: [
-        {
-            name: `description`,
-            content: computed(() => "asdasdasd"),
-        },
-    ],
-});
+
 onMounted(() => {
     AOS.init();
 });
