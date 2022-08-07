@@ -25,6 +25,7 @@
     "dependencies": {
         "@headlessui/vue": "^1.6.7",
         "@vueuse/core": "^8.9.4",
+        "@vueuse/head": "^0.7.9",
         "aos": "^2.3.4",
         "typescript": "^4.7.4",
         "vue-confetti": "^2.3.0"

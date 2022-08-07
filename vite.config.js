@@ -17,7 +17,7 @@ export default defineConfig({
             },
         }),
         AutoImport({
-            imports: ["vue", "@vueuse/core"],
+            imports: ["vue", "@vueuse/core", "@vueuse/head"],
             dts: "resources/js/auto-imports.d.ts",
             dirs: ["resources/js/enum/"],
             vueTemplate: true,
