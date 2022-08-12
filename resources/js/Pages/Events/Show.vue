@@ -107,7 +107,7 @@ function deleteInvite(id) {
                                     <thead>
                                         <tr>
                                             <th
-                                                class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                                class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider hidden lg:table-cell"
                                                 scope="col"
                                             >
                                                 QR
@@ -120,13 +120,13 @@ function deleteInvite(id) {
                                                 Invited
                                             </th>
                                             <th
-                                                class="px-6 py-3 bg-gray-50 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                                class="px-6 py-3 bg-gray-50 text-right text-xs font-medium text-gray-500 uppercase tracking-wider hidden lg:table-cell"
                                                 scope="col"
                                             >
                                                 Code
                                             </th>
                                             <th
-                                                class="px-6 py-3 bg-gray-50 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                                class="px-6 py-3 bg-gray-50 text-right text-xs font-medium text-gray-500 uppercase tracking-wider hidden lg:table-cell"
                                                 scope="col"
                                             >
                                                 Attendees
@@ -138,19 +138,19 @@ function deleteInvite(id) {
                                                 Status
                                             </th>
                                             <th
-                                                class="px-6 py-3 bg-gray-50 whitespace-nowrap text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                                class="px-6 py-3 bg-gray-50 whitespace-nowrap text-xs font-medium text-gray-500 uppercase tracking-wider hidden lg:table-cell"
                                                 scope="col"
                                             >
                                                 Response Date
                                             </th>
                                             <th
-                                                class="px-6 py-3 bg-gray-50 whitespace-nowrap text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                                class="px-6 py-3 bg-gray-50 whitespace-nowrap text-xs font-medium text-gray-500 uppercase tracking-wider hidden lg:table-cell"
                                                 scope="col"
                                             >
                                                 Last Opened
                                             </th>
                                             <th
-                                                class="px-6 py-3 bg-gray-50 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                                class="px-6 py-3 bg-gray-50 text-right text-xs font-medium text-gray-500 uppercase tracking-wider hidden lg:table-cell"
                                                 scope="col"
                                             >
                                                 Action
@@ -165,7 +165,7 @@ function deleteInvite(id) {
                                             class="bg-white"
                                         >
                                             <td
-                                                class="px-4 py-2 whitespace-nowrap text-sm text-gray-900"
+                                                class="px-4 py-2 whitespace-nowrap text-sm text-gray-900 hidden lg:table-cell"
                                             >
                                                 <a
                                                     :href="`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${$inertia.page.props.appName.url}/invitation/${invite.code}`"
@@ -192,7 +192,7 @@ function deleteInvite(id) {
                                                 </div>
                                             </td>
                                             <td
-                                                class="px-6 py-4 text-right whitespace-nowrap text-sm text-gray-500"
+                                                class="px-6 py-4 text-right whitespace-nowrap text-sm text-gray-500 hidden lg:table-cell"
                                             >
                                                 <span
                                                     class="text-gray-900 font-medium"
@@ -200,7 +200,7 @@ function deleteInvite(id) {
                                                 </span>
                                             </td>
                                             <td
-                                                class="px-6 py-4 text-right whitespace-nowrap text-sm text-gray-500"
+                                                class="px-6 py-4 text-right whitespace-nowrap text-sm text-gray-500 hidden lg:table-cell"
                                             >
                                                 <span
                                                     v-if="
@@ -212,22 +212,32 @@ function deleteInvite(id) {
                                                 </span>
                                             </td>
                                             <td
-                                                class="hidden px-6 py-4 whitespace-nowrap text-sm text-gray-500 md:block"
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
                                             >
-                                                <InvitationStatus
-                                                    :invite="invite"
-                                                />
+                                                <div class="flex gap-3">
+                                                    <span
+                                                        v-if="
+                                                            invite.response_id ==
+                                                            ReponseStatus.GOING
+                                                        "
+                                                        class="text-gray-900 font-medium lg:hidden table-cell"
+                                                        >{{ invite.attending }}
+                                                    </span>
+                                                    <InvitationStatus
+                                                        :invite="invite"
+                                                    />
+                                                </div>
                                             </td>
                                             <td
-                                                class="px-6 py-4 text-right whitespace-nowrap text-sm text-gray-500"
+                                                class="px-6 py-4 text-right whitespace-nowrap text-sm text-gray-500 hidden lg:table-cell"
                                             ></td>
                                             <td
-                                                class="px-6 py-4 text-right whitespace-nowrap text-sm text-gray-500"
+                                                class="px-6 py-4 text-right whitespace-nowrap text-sm text-gray-500 hidden lg:table-cell"
                                             >
                                                 {{ invite.last_opened }}
                                             </td>
                                             <td
-                                                class="px-6 py-4 text-right whitespace-nowrap text-sm text-gray-500"
+                                                class="px-6 py-4 text-right whitespace-nowrap text-sm text-gray-500 hidden lg:table-cell"
                                             >
                                                 <!-- delete button -->
                                                 <button

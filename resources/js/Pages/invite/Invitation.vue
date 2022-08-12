@@ -74,7 +74,7 @@
                             class="mx-auto text-sm md:text-2xl uppercase flex flex-col gap-3 text-left p-3"
                         >
                             <p data-aos="zoom-in">
-                                Together with thier families,
+                                Together with their families,
                                 <br />happily invite you to celebrate thier love
                                 and marriage
                             </p>
@@ -412,7 +412,7 @@
                         <br />
                         We hope you can join us!
                         <br />
-                        Kindly reply by <b>August 14, 2022</b>
+                        Kindly reply until <b>August 14, 2022</b>
                     </div>
                     <div class="flex flex-col gap-6 w-80 mx-auto">
                         <div
